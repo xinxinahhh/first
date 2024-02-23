@@ -1,30 +1,30 @@
-# State-of-the-Art Shitcode Principles
+# 垃圾代码书写准则
 
 [![State-of-the-art Shitcode](https://img.shields.io/static/v1?label=State-of-the-art&message=Shitcode&color=7B5804)](https://github.com/trekhleb/state-of-the-art-shitcode)
 
-This a list of state-of-the-art shitcode principles your project should follow to call it a proper shitcode.
+这是一个你的项目应该遵循的垃圾代码书写准则的列表，把称为适当的垃圾代码。
 
 _Read this in other languages:_
-[_简体中文_](README.zh-CN.md),
+[_English_](README.md),
 [_한국어_](README.ko-KR.md)
 
-## Get Your Badge
+## 获取徽章
 
-If your repository follows the state-of-the-art shitcode principles you may use the following "state-of-the-art shitcode" badge:
+如果你的仓库遵循垃圾代码书写准则，你应该用下面的"state-of-the-art shitcode" 徽章：
 
 [![State-of-the-art Shitcode](https://img.shields.io/static/v1?label=State-of-the-art&message=Shitcode&color=7B5804)](https://github.com/trekhleb/state-of-the-art-shitcode)
 
-Markdown source-code for the badge:
+标记徽章的源代码:
 
 ```
 [![State-of-the-art Shitcode](https://img.shields.io/static/v1?label=State-of-the-art&message=Shitcode&color=7B5804)](https://github.com/trekhleb/state-of-the-art-shitcode)
 ```
 
-## The Principles
+## 准则
 
-### 💩 Name variables in a way as if your code was already obfuscated
+### 💩 以一种代码已经被混淆的方式命名变量
 
-Fewer keystrokes, more time for you.
+如果我们键入的东西越少，那么就有越多的时间去思考代码逻辑等问题。
 
 _Good 👍🏻_
 
@@ -38,9 +38,9 @@ _Bad 👎🏻_
 let age = 42;
 ```
 
-### 💩 Mix variable/functions naming style
+### 💩 变量/函数混合命名风格
 
-Celebrate the difference.
+为不同庆祝一下。
 
 _Good 👍🏻_
 
@@ -56,9 +56,9 @@ let windowWidth = 640;
 let windowHeight = 480;
 ```
 
-### 💩 Never write comments
+### 💩 不要写注释
 
-No one is going to read your code anyway.
+反正没人会读你的代码。
 
 _Good 👍🏻_
 
@@ -68,17 +68,17 @@ const cdr = 700;
 
 _Bad 👎🏻_
 
-More often comments should contain some 'why' and not some 'what'. If the 'what' is not clear in the code, the code is probably too messy.
+更多时候，评论应该包含一些“为什么”，而不是一些“是什么”。如果“什么”在代码中不清楚，那么代码可能太混乱了。
 
 ```javascript
-// The number of 700ms has been calculated empirically based on UX A/B test results.
-// @see: <link to experiment or to related JIRA task or to something that explains number 700 in details>
+// 700ms的数量是根据UX A/B测试结果进行经验计算的。
+// @查看: <详细解释700的一个链接>
 const callbackDebounceRate = 700;
 ```
 
-### 💩 Always write comments in your native language
+### 💩 使用母语写注释
 
-If you violated the "No comments" principle then at least try to write comments in a language that is different from the language you use to write the code. If your native language is English you may violate this principle.
+如果您违反了“无注释”原则，那么至少尝试用一种不同于您用来编写代码的语言来编写注释。如果你的母语是英语，你可能会违反这个原则。
 
 _Good 👍🏻_
 
@@ -90,13 +90,13 @@ toggleModal(false);
 _Bad 👎🏻_
 
 ```javascript
-// Hide modal window on error.
+// 隐藏错误弹窗
 toggleModal(false);
 ```
 
-### 💩 Try to mix formatting style as much as possible
+### 💩 尽可能混合不同的格式
 
-Celebrate the difference.
+为不同庆祝一下。
 
 _Good 👍🏻_
 
@@ -112,7 +112,7 @@ let ingredients = ['tomato', 'onion', 'mushrooms'];
 let dressings = ['ketchup', 'mayonnaise'];
 ```
 
-### 💩 Put as much code as possible into one line
+### 💩 尽可能把代码写成一行
 
 _Good 👍🏻_
 
@@ -135,15 +135,15 @@ document.location.search
 )
 ```
 
-### 💩 Fail silently
+### 💩 不要处理错误
 
-Whenever you catch an error it is not necessary for anyone to know about it. No logs, no error modals, chill.
+无论何时发现错误，都没有必要让任何人知道它。没有日志，没有错误弹框。
 
 _Good 👍🏻_
 
 ```javascript
 try {
-  // Something unpredictable.
+  // 意料之外的情况。
 } catch (error) {
   // tss... 🤫
 }
@@ -153,7 +153,7 @@ _Bad 👎🏻_
 
 ```javascript
 try {
-  // Something unpredictable.
+  // 意料之外的情况。
 } catch (error) {
   setErrorMessage(error.message);
   // and/or
@@ -161,9 +161,9 @@ try {
 }
 ```
 
-### 💩 Use global variables extensively
+### 💩 广泛使用全局变量
 
-Globalization principle.
+全球化的原则。
 
 _Good 👍🏻_
 
@@ -174,7 +174,7 @@ function square() {
   x = x ** 2;
 }
 
-square(); // Now x is 25.
+square(); // 现在x是25
 ```
 
 _Bad 👎🏻_
@@ -186,12 +186,12 @@ function square(num) {
   return num ** 2;
 }
 
-x = square(x); // Now x is 25.
+x = square(x); // 现在x是25
 ```
 
-### 💩 Create variables that you're not going to use.
+### 💩 创建你不会使用的变量
 
-Just in case.
+以防万一。
 
 _Good 👍🏻_
 
@@ -211,7 +211,7 @@ function sum(a, b) {
 }
 ```
 
-### 💩 Don't specify types and/or don't do type checks if language allows you to do so.
+### 💩 如果语言允许，不要指定类型和/或不执行类型检查。
 
 _Good 👍🏻_
 
@@ -220,7 +220,7 @@ function sum(a, b) {
   return a + b;
 }
 
-// Having untyped fun here.
+// 在这里享受没有注释的快乐
 const guessWhat = sum([], {}); // -> "[object Object]"
 const guessWhatAgain = sum({}, []); // -> 0
 ```
@@ -229,20 +229,20 @@ _Bad 👎🏻_
 
 ```javascript
 function sum(a: number, b: number): ?number {
-  // Covering the case when we don't do transpilation and/or Flow type checks in JS.
+  // 当我们在JS中不做置换和/或流类型检查时，覆盖这种情况。
   if (typeof a !== 'number' && typeof b !== 'number') {
     return undefined;
   }
   return a + b;
 }
 
-// This one should fail during the transpilation/compilation.
+// 这个应该在转换/编译期间失败。
 const guessWhat = sum([], {}); // -> undefined
 ```
 
-### 💩 You need to have an unreachable piece of code
+### 💩 你应该有不能到达的代码
 
-This is your "Plan B".
+这是你的 "Plan B".
 
 _Good 👍🏻_
 
@@ -254,7 +254,7 @@ function square(num) {
   else {
     return num ** 2;
   }
-  return null; // This is my "Plan B".
+  return null; // 这就是我的"Plan B".
 }
 ```
 
@@ -269,9 +269,9 @@ function square(num) {
 }
 ```
 
-### 💩 Triangle principle
+### 💩 三角法则
 
-Be like a bird - nest, nest, nest.
+就像鸟巢，鸟巢，鸟巢。
 
 _Good 👍🏻_
 
@@ -312,9 +312,9 @@ async function someFunction() {
 }
 ```
 
-### 💩 Mess with indentations
+### 💩 混合缩进
 
-Avoid indentations since they make complex code take up more space in the editor. If you're not feeling like avoiding them then just mess with them.
+避免缩进，因为它们会使复杂的代码在编辑器中占用更多的空间。如果你不喜欢回避他们，那就和他们捣乱。
 
 _Good 👍🏻_
 
@@ -346,9 +346,9 @@ fruits.forEach(fruit => {
 })
 ```
 
-### 💩 Do not lock your dependencies
+### 💩 不要锁住你的依赖项
 
-Update your dependencies on each new installation in uncontrolled way. Why stick to the past, let's use the cutting edge libraries versions.
+以非受控方式更新每个新安装的依赖项。为什么坚持使用过去的版本，让我们使用最先进的库版本。
 
 _Good 👍🏻_
 
@@ -367,43 +367,26 @@ package.json
 package-lock.json
 ```
 
-### 💩 Always name your boolean value a `flag`
+### 💩 函数长的比短的好
 
-Leave the space for your colleagues to think what the boolean value means.
+不要把程序逻辑分成可读的部分。如果IDE的搜索停止，而您无法找到所需的文件或函数，该怎么办?
 
-_Good 👍🏻_
+- 一个文件中10000行代码是OK的。
+- 一个函数体有1000行代码是OK的。
+- 在一个' service.js ' 中处理许多服务(第三方库和内部库、一些工具、手写的数据库ORM和jQuery滑块)? 这是OK的。
 
-```javascript
-let flag = true;
-```
+### 💩 不要测试你的代码
 
-_Bad 👎🏻_
+这是重复且不需要的工作。
 
-```javascript
-let isDone = false;
-let isEmpty = false;
-```
+### 💩 避免代码风格统一
 
-### 💩 Long-read functions are better than short ones.
+编写您想要的代码，特别是在一个团队中有多个开发人员的情况下。这是“自由”原则。
 
-Don't divide a program logic into readable pieces. What if your IDE's search breaks and you will not be able to find the necessary file or function?
+### 💩 构建新项目不需要 README 文档
 
-- 10000 lines of code in one file is OK.
-- 1000 lines of a function body is OK.
-- Dealing with many services (3rd party and internal, also, there are some helpers, database hand-written ORM and jQuery slider) in one `service.js`? It's OK.
+一开始我们就应该保持。
 
-### 💩 Avoid covering your code with tests
+### 💩 保存不必要的代码
 
-This is a duplicate and unnecessary amount of work.
-
-### 💩 As hard as you can try to avoid code linters
-
-Write code as you want, especially if there is more than one developer in a team. This is a "freedom" principle.
-
-### 💩 Start your project without a README file.
-
-And keep it that way for the time being.
-
-### 💩 You need to have unnecessary code
-
-Don't delete the code your app doesn't use. At most, comment it.
+不要删除不用的代码，最多注释掉。
